@@ -1,19 +1,22 @@
-// script.js
+function showSection(id) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => section.classList.remove('active'));
 
-// Navigasi antar halaman (Executor dan Menu Utama)
-document.addEventListener("DOMContentLoaded", () => {
-  const executorBtn = document.getElementById("btn-executor");
-  const homeSection = document.getElementById("home-section");
-  const executorSection = document.getElementById("executor-section");
-  const backBtn = document.getElementById("btn-back");
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+  }
+}
 
-  executorBtn.addEventListener("click", () => {
-    homeSection.style.display = "none";
-    executorSection.style.display = "block";
-  });
+// Inisialisasi default ke menu home
+document.addEventListener('DOMContentLoaded', () => {
+  showSection('home');
 
-  backBtn.addEventListener("click", () => {
-    executorSection.style.display = "none";
-    homeSection.style.display = "block";
+  const navButtons = document.querySelectorAll('[data-target]');
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      showSection(targetId);
+    });
   });
 });

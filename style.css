@@ -7,8 +7,7 @@ body {
   padding: 30px 10px;
 }
 
-h1 {
-  font-size: 32px;
+h1, h2, h3 {
   color: #00ff99;
   text-shadow: 0 0 10px #00ff99;
 }
@@ -57,52 +56,57 @@ p {
   color: #000;
 }
 
-.executor-container {
-  margin-top: 40px;
+.section {
+  display: none;
   padding: 20px;
-  border-top: 2px solid #00ff99;
 }
 
-.executor-item {
-  margin-bottom: 15px;
+.section.active {
+  display: block;
+}
+
+.executor-entry {
+  margin: 20px auto;
+  max-width: 400px;
+  border: 2px solid #00ff99;
+  border-radius: 15px;
   padding: 15px;
-  border: 1px solid #00ff99;
-  border-radius: 10px;
-  background-color: #001a0f;
+  background-color: rgba(0, 255, 153, 0.1);
+  box-shadow: 0 0 15px #00ff99;
 }
 
-.executor-item h3 {
-  margin: 5px 0;
-  color: #00ffcc;
-}
-
-.executor-item .status {
+.status {
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
 }
 
-.executor-item .status.on {
-  color: #00ff99;
+.status.on {
+  background-color: #00cc66;
 }
 
-.executor-item .status.off,
-.executor-item .status.down {
-  color: #ff5555;
+.status.down {
+  background-color: #ff3333;
 }
 
-.executor-item a.download-btn {
+.status.off {
+  background-color: #999999;
+}
+
+.download-btn {
+  margin-top: 10px;
   display: inline-block;
-  padding: 8px 16px;
-  background: #00ff99;
+  padding: 8px 20px;
+  font-size: 14px;
   color: #000;
-  font-weight: bold;
+  background: #00ff99;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 0 8px #00ff99;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.executor-item a.download-btn:hover {
+.download-btn:hover {
   background: #00cc77;
-  box-shadow: 0 0 16px #00ff99;
 }

@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #000000, #001f0f);
+  color: #00ff99;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccffdd;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #00ff99;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00ff99;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00cc77;
+  box-shadow: 0 0 25px #00ff99;
+}
+
+.top-right-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.top-right-buttons .btn {
+  background: transparent;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  box-shadow: none;
+  margin: 4px;
+}
+
+.top-right-buttons .btn:hover {
+  background: #00ff99;
+  color: #000;
+}
+
+.executor-container {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid #00ff99;
+}
+
+.executor-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #00ff99;
+  border-radius: 10px;
+  background-color: #001a0f;
+}
+
+.executor-item h3 {
+  margin: 5px 0;
+  color: #00ffcc;
+}
+
+.executor-item .status {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.executor-item .status.on {
+  color: #00ff99;
+}
+
+.executor-item .status.off,
+.executor-item .status.down {
+  color: #ff5555;
+}
+
+.executor-item a.download-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #00ff99;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 8px #00ff99;
+  transition: 0.3s;
+}
+
+.executor-item a.download-btn:hover {
+  background: #00cc77;
+  box-shadow: 0 0 16px #00ff99;
+}
